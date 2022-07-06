@@ -82,6 +82,10 @@ enum HTTPStatus: Int, Error {
         case clientError
         case serverError
         case unknown
+        
+        var isSuccess: Bool {
+            self == .success
+        }
     }
 
     var httpStatusType: HTTPStatusType {
